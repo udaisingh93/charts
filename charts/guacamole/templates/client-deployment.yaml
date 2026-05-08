@@ -63,6 +63,8 @@ spec:
             {{- end }}
           {{- end }}
           env:
+            - name: WEBAPP_CONTEXT
+              value: {{ .Values.client.webappContext | default "guacamole" | quote }}
             - name: GUACD_HOSTNAME
               value: {{ .Values.client.guacd.hostname | default (printf "%s-guacd" (include "guacamole.fullname" .)) }}
             - name: GUACD_PORT

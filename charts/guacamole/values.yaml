@@ -415,6 +415,10 @@ client:
     secret: ""
   
   # Guacd connection override
+  # Context path Guacamole is served under (WEBAPP_CONTEXT env var)
+  # Use "ROOT" to serve at /
+  webappContext: "guacamole"
+
   # Override the guacd hostname/port the client connects to (e.g. for Consul upstream or remote guacd)
   # Defaults to the guacd service created by this chart
   guacd:
